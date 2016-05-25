@@ -61,6 +61,11 @@
     'name': 'keyword.operator.sigil.rust'
     'match': '[&*](?=[a-zA-Z0-9_\\(\\[\\|\\"]+)'
   }
+  'fn_where': {
+    'comment': 'Where keyword'
+    'name': 'keyword.other.where.rust'
+    'match': '\\bwhere\\b'
+  }
   'self': {
     'comment': 'Self variable'
     'name': 'variable.language.rust'
@@ -130,7 +135,7 @@
   'std_traits': {
     'comment': 'Standard library trait'
     'name': 'support.type.std.rust'
-    'match': '\\b(ToOwned|ToString)\\b'
+    'match': '\\b(ToOwned|ToString|Hash|Hasher|Binary|Debug|Display|LowerExp|LowerHex|Octal|Pointer|UpperExp|UpperHex|Write)\\b'
   }
   'type_params': {
     'comment': 'Type parameters'
@@ -330,6 +335,7 @@
       { 'include': '#block_comment' }
       { 'include': '#line_comment' }
       { 'include': '#sigils' }
+      { 'include': '#fn_where' }
       { 'include': '#self' }
       { 'include': '#mut' }
       { 'include': '#ref_lifetime' }
